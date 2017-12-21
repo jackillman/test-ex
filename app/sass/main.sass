@@ -1,0 +1,101 @@
+@import "vars" 
+
+@font-face
+	font-family: Pacifico
+	src: url(../fonts/Pacifico/Pacifico-Regular.ttf)
+@font-face
+	font-family: HelveticaNeue
+	src: url(../fonts/HelveticaNeue/HelveticaNeue.ttf)
+
+
+ 
+@mixin big
+	@media (min-width: 1201px)
+		@content
+ 
+@mixin large
+    @media (min-width: 992px) and (max-width: 1200px)
+    	@content
+       
+@mixin medium
+	@media (min-width: 768px) and (max-width: 991px)
+	    @content
+           
+@mixin small
+    @media (min-width: 500px) and (max-width: 767px)
+    	@content
+
+@mixin micro
+    @media (min-width: 250px) and (max-width: 499px)
+        @content
+
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	// font-family: $gothamR
+	overflow-x: hidden
+	opacity: 1
+	color: #616161
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.wrapper
+	.header
+		background: url(../img/top-bg.jpg) no-repeat top
+		height: 610px
+		.content
+			&__title
+				font-size: 60px
+				color: #fff
+				font-family: Pacifico
+			&__descr
+				font-size: 24px
+				font-family: HelveticaNeue
+				color: #fff
+			&__social
+				font-size: 20px
+				padding: 0
+				list-style: none
+				
